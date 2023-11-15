@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Picture Changer</title>
+    <style>
+        #randomImage {
+            align-items: center;
+            max-width: 80%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+<img id="randomImage" src="" alt="Vajuta allolevat nuppu!">
+<div class="container">
+    <div class="box-container">
+        <div class="box">
+<button onclick="changeImage()">Change Image</button>
+</div>
+</div>
+</div>
+<script>
+    // Array of image URLs
+    var imageArray = [
+        'images/pic4.jpg',
+        'images/pic3.jpg',
+        'images/pic5.jpg',
+        'images/pic6.jpg',
+        'images/pic2.jpg',
+        // Add more image URLs as needed
+    ];
+
+    function changeImage() {
+        // Get a random index from the imageArray
+        var randomIndex = Math.floor(Math.random() * imageArray.length);
+
+        // Get the image element by its ID
+        var imageElement = document.getElementById('randomImage');
+
+        // Set the source attribute of the image to the randomly selected URL
+        imageElement.src = imageArray[randomIndex];
+    }
+</script>
+
+</body>
+</html>
